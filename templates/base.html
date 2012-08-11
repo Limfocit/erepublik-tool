@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <title>{% block title %}My amazing site{% endblock %}</title>
+</head>
+
+<body style="padding-top: 90px;">   
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+            <a class="brand" href="/">Erepublik Tool</a>
+            </div>
+        </div>  
+    </div>
+    <div class="container">
+        <!--<h1 style="font-size:54px;margin-bottom: 45px;">Erepublik Tool</h1>-->
+        {% block content %}{% endblock %}
+        
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+cron:
+- description: create queue
+  url: /tasks/citizen_queue_handler
+  schedule: every 20 minutes from 00:00 to 04:00
+
+- description: load citizen data
+  url: /tasks/citizen_data_load_handler
+  schedule: every 10 minutes from 00:00 to 04:00
+
+- description: count mu damage
+  url: /tasks/mu_damage_handler
+  schedule: every day 05:00 
+
+- description: count mu damage to memcache
+  url: /tasks/mu_damage_memcache_handler
+  schedule: every 1 hours

@@ -1,0 +1,10 @@
+{% extends "admin.html" %}
+
+
+{% block form %}
+
+		<form action"/admin/{{url}}" method="post" class="well form-inline">
+			<input type="text" class="input-medium search-query" name="mu">
+			<button type="submit" class="btn">Load</button>
+	
+{% endblock %}

@@ -1,0 +1,27 @@
+application: erepublik-tool
+api_version: 1
+version: 1
+runtime: python27
+threadsafe: true
+
+handlers:
+- url: /
+  script: index.app
+
+- url: /static
+  static_dir: static
+
+- url: /favicon.ico
+  static_files: flag_russia.ico
+  upload: flag_russia.ico
+
+- url: /admin/.*
+  script: admin.app
+  login: admin
+
+- url: /tasks/.*
+  script: tasks.app
+  login: admin
+
+- url: /data/.*
+  script: data.app

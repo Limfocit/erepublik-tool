@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="span4">
+        <ul class="breadcrumb">
+            <li class="active">Admin <span class="divider">/</span></li>
+            <li class="active">{{title}}</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row" style="padding-top:20px;">
+    <div class="span3">
+        {% block form %}{% endblock %}
+        {{text}}
+    </div>
+    
+    <div class="span3 offset6">
+        <ul class="nav nav-pills nav-stacked">
+            <li {%if load_mu_active %}class="active"{%endif%}><a href="/admin/load_mu">Load MU</a></li>
+            <li {%if delete_mu_active %}class="active"{%endif%}><a href="/admin/delete_mu">Remove MU</a></li>
+            <li {%if current_time_active %}class="active"{%endif%}><a href="/admin/current_time">Current Time</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
